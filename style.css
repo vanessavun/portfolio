@@ -213,3 +213,20 @@ footer {
         width: 70%;
     }
 }
+
+.indiv-project {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.indiv-text {
+    display: flex;
+    width: 80%;
+    justify-content: center;
+}
+
+.indiv-screenshot img {
+    max-width: 100%;
+    width: 400px;
+}
