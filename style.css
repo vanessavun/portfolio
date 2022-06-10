@@ -24,6 +24,7 @@ p {
     font-family: 'Nunito', sans-serif;
 }
 
+
 header {
     display: flex;
     justify-content: center;
@@ -58,26 +59,19 @@ header {
     color: #f4acb7;
 }
 
-
+#about,
+#projects,
+#resume,
+#contact {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
 
 .about {
     display: flex;
-    justify-content: center;
     align-items: center;
-    margin: 0 100px 0 100px;
-    min-width: 800px;
-}
-
-main {
-    justify-content: center;
-}
-
-.projects,
-.resume-portion {
-    display: block;
-    justify-content: center;
-    min-width: 800px;
-    margin-left: 100px;
+    width: 65%;
 }
 
 .about h2{
@@ -86,11 +80,12 @@ main {
 }
 
 .about-text {
-    padding: 30px;
+    padding: 10px;
     align-items: center;
 }
 
 .about-text img {
+    border: solid 5px #d5bdaf;
     border-radius: 50%;
     width: 200px;
 }
@@ -105,13 +100,14 @@ main {
 
 .resume-context {
     padding-left: 30px;
-    padding-bottom: 50px;
+    width: 60%;
 }
 
 .screenshot {
     align-content: center;
 }
 .screenshot img {
+    max-width: 100%;
     width: 300px;
 }
 
@@ -120,24 +116,100 @@ main {
     max-width: 300px;
 }
 
+.project-info a {
+    text-decoration: none;
+    color: #d5bdaf;
+    font-weight: bold;
+}
+
+.project-info a:hover {
+    color: #f4acb7;
+}
+
+.project {
+    padding: 10px;
+}
+
 .contact-info {
     display: flex;
-    margin-left: 100px;
-    justify-content: space-evenly;
     align-items: center;
 }
 
 .contact-info p {
-    padding: 0 20px;
-    margin: 0;
+    padding: 10px;
 }
-
 footer {
     display: flex;
-    justify-content: left;
+    justify-content: center;
     background-color: #f4acb7;
 }
 
 .contact-info a:hover {
     font-weight: bold;
+}
+
+@media screen and (max-width: 428px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+    
+    h2 {
+        font-size: 1.2rem;
+    }
+    
+    h3 {
+        font-size: 1rem;
+    }
+    
+    p {
+        font-size: .8rem;
+    }
+
+    .resume-context {
+        padding: 10px;
+        width: 90%;
+    }
+
+    .contact-info {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    h3 {
+        font-size: 1.1rem;
+    }
+    
+    p {
+        font-size: .9rem;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    #about,
+    #resume {
+        justify-content: center;
+    }
+    .about,
+    .project-text{
+        display: grid;
+    }
+
+    .about-text {
+        display: grid;
+        justify-content: center;
+    }
+    .resume-context {
+        justify-content: center;
+        padding: 10px;
+        width: 70%;
+    }
 }
